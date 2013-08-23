@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VERSION=0.10.16
+VERSION=0.10.17
 clean=0
 srcdeb=""
 
@@ -37,7 +37,7 @@ if [ ! -d "$node_dir/debian" ]; then
 	echo "Extracting $node_tar ..."
 	mkdir -p "$node_dir"
 	tar zxf "$node_tar" --strip-components=1 -C "$node_dir"
-	
+
 	echo "Creating $node_dir/debian ..."
 	cp -a deb "$node_dir/debian"
 	sed -e "s/\${VERSION}/${VERSION}/" deb/changelog > "$node_dir/debian/changelog"
