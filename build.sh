@@ -3,6 +3,7 @@
 VERSION=0.10.17
 clean=0
 srcdeb=""
+output="output/"
 
 set -e
 while [ ! -z "$1" ]; do
@@ -56,3 +57,8 @@ cd -
 [ "$srcdeb" = "" ]   && ls -l nodejs_*deb
 [ "$srcdeb" = "-S" ] && ls -l nodejs_*
 
+if [ ! -d $output ]; then
+	mkdir $output
+fi
+
+mv nodejs_$VERSION* $output
