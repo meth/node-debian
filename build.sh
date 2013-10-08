@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VERSION=0.10.17
+VERSION=0.10.20
 clean=0
 srcdeb=""
 output="output/"
